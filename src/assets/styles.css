@@ -1,0 +1,308 @@
+/*Importar fuente Websymbols*/
+@font-face{
+    font-family: "icono";
+    src: url("fonts/websymbols-regular-webfont.eot");
+    src: url("fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype"),
+        url("fonts/websymbols-regular-webfont.woff") format("woff"),
+        url("fonts/websymbols-regular-webfont.ttf") format("truetype"),
+        url("fonts/websymbols-regular-webfont.svg#WebSymbolsRegular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+/*Estilos generales*/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	width: 100%;
+	background-color: #F2F2F1;
+}
+
+/*Estilos del navbar*/
+.login {
+    margin-bottom:5px;
+}
+.dropdown-menu {        
+    width: 280px !important;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: #FEFEFE;
+}
+
+.navbar{
+	height: 60px !important;
+	background-color: #FF6859 !important;
+	margin-bottom: 0px;
+
+}
+
+.collapse ul li a{
+	color: white !important;
+	font-weight: bold;
+	font-family: "Open Sans", sans-serif;	
+	margin: 0px auto;		
+}
+
+.navbar-brand img{
+	width: 279px;
+	height: 32px;
+	padding-left: 98px;
+}
+
+.icono{
+	display: block;
+	float: right;
+	height: 15px;
+	margin-left: 15px;	
+	font-family: "icono";
+	color: white;
+}
+
+form label{
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 5px;
+
+}
+
+form input[type="email"],
+form input[type="password"]{
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
+	margin-bottom: 8px;
+
+}
+
+form button,
+form input[type="submit"]{
+	width: 100%;
+	font-family: "Open Sans", sans-serif;
+	background-color: #FF6859;
+	color: white !important;
+	font-size: 16px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	margin-top: 25px;
+}
+
+/*content*/
+.contenedor{
+	width: 81%;
+	margin: 0px auto;
+	min-height: 680px;
+	margin-top: 30px;	
+}
+
+/*Titulo*/
+.title{
+	font-family: "Open Sans", sans-serif;
+	font-size: 30px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-align: center;
+	border-bottom: 4px solid #FF6859;
+}
+
+/*Card estilos*/
+.row{
+	margin-top: 30px;
+}
+
+.card{
+	margin-top: 5px;	
+	height: 350px;
+	background-color: #FEFEFE;
+
+}
+
+.card-body h5{	
+	color: #304183;
+	font-size: 25px;
+	font-weight: bold;
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #304183;
+}
+
+.clearfix{
+	clear: both;
+	float: none;
+}
+
+.card-body h3,
+.card-body h4{
+	color: #C0C0C0;	
+}
+
+.card-body h4{
+	font-family: "Open Sans", sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: lowercase;
+}
+
+.card-body h4:first-letter{
+    text-transform: uppercase;
+}
+
+
+.card-body h3{
+	font-family: "Open Sans", sans-serif;
+	font-size: 20px;
+	font-weight: bold;	
+}
+
+.svg-inline--fa.fa-w-16{	
+	color: #B7B7B7;
+}
+
+.caja{
+	display: block;
+	max-height: 300px;
+	float: right;
+	margin-right: 10%;
+	margin-top: 7%;
+}
+
+.country{
+	display:block;
+	float: left;
+}
+
+.temp h1{
+	display: block;
+	font-family: "Arial";
+	font-size: 42px;
+	font-weight: bold;
+}
+
+.date h2{
+	font-family:"Open Sans", sans-serif;
+	font-size: 26px; 
+}
+
+.time h2{
+	font-family:"Open Sans", sans-serif;
+	font-size: 15px;
+	letter-spacing: 2px;
+	font-weight: bold; 
+}
+
+.info{
+	display: block;
+	width: 46%;
+	float: right;
+	margin-top: 8PX;
+}
+
+.info span{
+	display: inline;
+	font-size: 15px;
+	float: right;
+	margin-right: 20px;
+}
+
+.temp-F span{
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+/*Estilos alertas*/
+.success{
+	width: 30%;
+	margin-bottom: 0px;
+    background: #1f7e58;
+    color: white;
+    text-align: center;    
+}
+
+.warning{
+	width: 25%;
+    color: white;
+    text-align: center;
+    background: red;
+}
+
+/*Estilos de dias del clima*/
+
+.card-body .info{
+	height: 300px;	
+}
+
+.time-container{
+	display: flex;	
+}
+
+.time-item{
+	width: 100%;
+	position: relative;
+	border-right: 2px solid #D0D0D0;
+	padding-right: 65px;	
+}
+
+.time-sinlinea{
+	width: 100%;
+	position: relative;	
+	padding-right: 65px;
+}
+
+.time-item p,
+.time-sinlinea p{
+	font-size: 25px;
+	color: #304183;
+	font-family:"Open Sans", sans-serif;
+	font-weight: bold;
+	letter-spacing: 2px;	
+	padding-left: 25px;	
+}
+
+.detail{
+	margin-left: 30%;
+	margin-top: 21%;
+	margin-bottom: 13%;
+}
+
+.time-item .detail p,
+.time-sinlinea .detail p{
+	font-size: 18px;
+	font-family: "Open Sans", sans-serif;
+	font-weight: bold;
+	margin-top: 10px;
+	color: black;
+	letter-spacing: 1px;	
+}
+
+.svg-inline--fa.fa-w-20,
+.svg-inline--fa.fa-w-16,
+.svg-inline--fa.fa-w-14{	
+	color:#B7B7B7;
+	margin-left: 30% !important;
+}
+
+/*Estilos del pie de página*/
+.footer{
+	width: 100%;
+	height: 48px;
+	margin-top:15px;
+	background-color: #141414;
+	color:#B7B7B7;
+	padding-left: 13%;
+}
+
+
+.footer img{	
+	display: block;
+	width: 280px;
+	height: 30px;
+	float: right;
+	padding-right: 11%;	
+}
+
+.footer .pie{
+	padding-top: 10px;
+}

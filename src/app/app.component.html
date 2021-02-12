@@ -1,0 +1,168 @@
+<!--NavBar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="../assets/img/logo_AVpng.png">
+  </a>
+  <div class="collapse navbar-collapse mr-2" id="navbarSupportedContent">    
+      <ul class="navbar-nav ml-auto mr-5 pr-5">
+          <li class="nav-item dropdown mr-2">
+              <a class="nav-link border rounded"  href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              INICIAR SESIÓN<span class="icono">U</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right mt-2">
+                  <form #loginForm="ngForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+                      <p>
+                        <label for="username">Usuario</label>
+                        <input class="form-control login" type="email" name="email" #email="ngModel" [(ngModel)]="user.email" placeholder="username" />
+                      </p>
+
+                      <p>                          
+                        <label for="username">Contraseña</label>
+                        <input class="form-control login" type="password" name="password" #password="ngModel" [(ngModel)]="user.password" placeholder="password"/>
+                      </p>
+
+                      <input class="btn border rounded" type="submit" value="INICIAR SESIÓN">
+                  </form>
+              </div>
+          </li>        
+      </ul>    
+  </div>
+</nav>
+
+<!--alertas-->
+<p class="success" *ngIf="status == 'success'" >
+  Te has identificado correctamente
+</p>
+
+<p class="warning" *ngIf="status == 'error'">
+  No te has podido identificar correctamente
+</p>
+
+
+<div class="contenedor">
+  <!--titulo-->
+    <div class="title">
+      SERVICIO DEL CLIMA
+    </div>
+
+  <!--Card-Time-->
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card p-2">
+        <div class="card-body">
+          <h5 class="card-title">Seleccioná la zona</h5>
+          <form (submit)="submitLocation(countryCode, cityName)">
+            <label for="country">País</label>
+            <input type="text" placeholder="Seleccioná un país" class="form-control" autofocus #cityName>
+            <label for="city">Ciudad</label>
+            <input type="text" placeholder="Seleccioná una ciudad" class="form-control" #countryCode >
+            
+            <input class="btn border rounded" type="submit" value="BUSCAR">
+        </form>          
+        </div>
+      </div>
+    </div>
+     <div class="col-sm-6">
+      <div class="card">
+        <div  class="card-body">
+          <div *ngIf="weather" class="view">
+            <h5 class="card-title">Reporte del Clima</h5>
+              <div class="country">
+                <h4>{{weather.sys.country}}</h4>
+                <h3>{{weather.name}}</h3><br>
+
+                <div class="date">
+                  <h2>{{ myDate | date:'EEEE' | uppercase }}</h2>
+                </div>
+                <div class="time">
+                  <h2>{{ weather.weather[0].description | uppercase }} </h2>
+                </div>
+
+                <div class="temp">
+                  <h1>{{weather.main.temp}} °C</h1>              
+                </div>
+                <div class="temp-F">
+                  <span>71.6 °F</span>
+                </div>
+              </div>
+
+              <div class="caja">
+                <i class="fas fa-10x fa-sun"></i>
+              </div>
+
+              <div class="info">
+                <span>Prob.de precipitaciones: {{weather.wind.deg}}%</span>
+                <span>Humedad: {{weather.main.humidity}} %</span>
+                <span>Viento: a {{weather.wind.speed}} km/h</span>
+              </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+</div>
+    
+    <!--Tarjeta días edl clima-->
+    <!--Lunes-->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body info">
+
+            <div class="time-container">
+              
+              <div class="time-item">
+                <p>LUNES</p>
+                <i class="fas fa-7x fa-cloud-sun"></i><br>
+                <div class="detail">
+                  <p>22 °C</p>  
+                  <p>71.6 °F</p>            
+                </div>
+              </div>
+              <!--Martes-->
+              <div class="time-item">
+                <p>MARTES</p>
+                 <i class="fas fa-7x fa-cloud"></i><br>
+                <div class="detail">
+                  <p>22 °C</p>  
+                  <p>71.6 °F</p>            
+                </div>
+              </div>
+
+              <!--Miercoles-->
+              <div class="time-item">
+                <p>MIERCOLES</p>
+                 <i class="fas fa-7x fa-cloud-showers-heavy"></i><br>
+                <div class="detail">
+                  <p>22 °C</p>  
+                  <p>71.6 °F</p>            
+                </div>
+              </div>
+
+              <!--Jueves-->
+              <div class="time-item">
+                <p>JUEVES</p>
+                 <i class="fas fa-7x fa-poo-storm"></i><br>
+                <div class="detail">
+                  <p>22 °C</p>  
+                  <p>71.6 °F</p>            
+                </div>
+              </div>
+
+              <!--Viernes-->
+              <div class="time-sinlinea">
+                <p>VIERNES</p>
+                 <i class="fas fa-7x fa-snowflake"></i><br>
+                <div class="detail">
+                  <p>22 °C</p>  
+                  <p>71.6 °F</p>            
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fin Tarjeta días edl clima-->
+
+
+  
