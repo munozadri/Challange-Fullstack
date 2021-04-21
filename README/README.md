@@ -42,7 +42,7 @@ configuración del file routes para las rutas post de las funciones de saveUSer,
 2. [Tecnologías](#technologies)
 
 Tecnologías empleadas para el FRONTEND:
--HTML
+-HTML.....
 -CSS
 -Bootstrap 4.6.0
 -jQuery 3.5.1
